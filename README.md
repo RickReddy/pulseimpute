@@ -98,6 +98,10 @@ and if you have any further questions, please feel free to email me at maxxu@gat
 ------------------
 Addendum by Rithwik Guntaka
 
+Before using any models, you need to run get_ckpts.sh which will store model weights in the out folder. From there, if you wish to test the hcpa_ppg dataset for example, you would create in the "out" folder a folder called "hcpa_ppg/bdc883_emb256_layer2_hcpa_ppg/" and store the model weights you wish to use. The name of the model weights has to match what is listed in the config, with the common epoch being 54200 which would match a file "epoch_54200/epoch_54200.pkl".
+
+You also need to run the npy file generator for the dataset you wish to test.
+
 For my purpose, I've largely used the "test_impmodel_display.py" file to test any models. Setting the config at the top of the file and running it will decide which model to test on which data. For example, if you want to use test the MIMIC-III trained dataset on HCPA PPG data, you would use the config "bdc883_emb256_layer2_hcpa_ppg_test."
 
 To see the specifics about each config, you can open the configs folder. For "bdc883_emb256_layer2_hcpa_ppg_test", the config would be described under configs/test_transformer_configs.py. For the code relevant to how specific data is accessed, this can be found in the utils folder. For the HCPA PPG dataset, you would access "utils/hcpa_ppg.py". This file describes which files are accessed for the data and for the missingness.
