@@ -12,7 +12,7 @@ b, a = signal.butter(order, nyquist_freq, fs=original_fs, btype='lowpass')
 
 filepath = "/data1/neurdylab/datasets/hcp_a/physio_preproc/{filename}_preproc/{filename}_preprocVars.mat"
 files = []
-with open("/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_good_files.txt") as text_file:
+with open("data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_good_files.txt") as text_file:
     for line in text_file:
         files.append(filepath.replace("{filename}", line.strip()))
 
@@ -48,4 +48,4 @@ for index, file in enumerate(files):
         array = np.empty(shape=(len(files), data.shape[0], 1))
     array[index] = data
 
-np.save('/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_test.npy', array)
+np.save('data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_test.npy', array)
