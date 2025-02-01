@@ -12,7 +12,7 @@ b, a = signal.butter(order, nyquist_freq, fs=original_fs, btype='lowpass')
 
 filepath = "/data1/datasets/hcp/{file_id}/MNINonLinear/Results/{file_paradigm}/{file_paradigm}_Physio_log.txt"
 files = []
-with open("/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpya_ppg/hcpya_ppg_good_files.txt") as text_file:
+with open("data/pulseimpute_data/waveforms/hcpya_ppg/hcpya_ppg_good_files.txt") as text_file:
     for line in text_file:
         file_id = line.strip().split("-")[0]
         file_paradigm = line.strip().split('-', 1)[1].replace("-", "_")
@@ -39,4 +39,4 @@ for index, file in enumerate(files):
         array = np.empty(shape=(len(files), data.shape[0], 1))
     array[index] = data
 
-np.save('/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpya_ppg/hcpya_ppg_test.npy', array)
+np.save('data/pulseimpute_data/waveforms/hcpya_ppg/hcpya_ppg_test.npy', array)
