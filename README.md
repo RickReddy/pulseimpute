@@ -98,7 +98,7 @@ and if you have any further questions, please feel free to email me at maxxu@gat
 ------------------
 Addendum by Rithwik Guntaka
 
-Before using any models, you need to run get_ckpts.sh which will store model weights in the out folder. From there, if you wish to test the hcpa_ppg dataset for example, you would create in the "out" folder a folder called "hcpa_ppg/bdc883_emb256_layer2_hcpa_ppg/" and store the model weights you wish to use. The name of the model weights has to match what is listed in the config, with the common epoch being 54200 which would match a file "epoch_54200/epoch_54200.pkl".
+Before using any models, you need to run get_ckpts.sh which will store model weights in the out folder. From there, if you wish to test the hcpa_ppg dataset for example, you would create in the "out" folder a folder called "hcpa_ppg/bdc883_emb256_layer2_hcpa_ppg/" and store the model weights you wish to use. The name of the model weights has to match what is listed in the config, with the common epoch being 54200 which would match a file "epoch_54200/epoch_54200.pkl". The final file path would look like "out/hcpa_ppg/bdc883_emb256_layer2_hcpa_ppg/epoch_54200/epoch_54200.pkl".
 
 You also need to run the npy file generator for the dataset you wish to test.
 
