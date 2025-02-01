@@ -72,6 +72,6 @@ for index, filepath in enumerate(filepaths):
     if index >= round(0.9*len(filepaths)):
         test_array[index - round(0.9*len(filepaths))] = data
 
-np.save('/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_train.npy', train_array)
-np.save('/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_val.npy', test_array)
-np.save('/home/guntakrr/og-pulseimpute/data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_test_unsorted.npy', val_array)
+np.save('data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_train.npy', train_array)
+np.save('data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_val.npy', test_array)
+np.save('data/pulseimpute_data/waveforms/hcpa_ppg/hcpa_ppg_test_unsorted.npy', val_array)
